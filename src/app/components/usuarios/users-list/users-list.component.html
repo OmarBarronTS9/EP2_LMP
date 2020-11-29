@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-body">
+        <h6 class="text-center">Listado de datos</h6>
+        <table class="table table-sm table-hover">
+            <tbody>
+                <tr *ngFor = "let user of userList">
+                    <td>{{user.name}}</td>
+                    <td>{{user.carrera}}</td>
+                    <td>
+                        <button class="btn btn-secondary text-white" (click)="onEdit(user)">
+                            <i class="far fa-edit"></i>
+                        </button>
+                        <button class="btn btn-danger text-white" (click)="onDel(user.$id)">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
