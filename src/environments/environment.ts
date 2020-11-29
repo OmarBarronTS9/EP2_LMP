@@ -5,15 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "API_KEY",
-    authDomain: "PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://PROJECT_ID.firebaseio.com",
-    projectId: "PROJECT_ID",
-    storageBucket: "PROJECT_ID.appspot.com",
-    messagingSenderId: "SENDER_ID",
-    appId: "APP_ID",
-    measurementId: "G-MEASUREMENT_ID",
-  
+    apiKey: "AIzaSyAsVlp1Gw3QtilS3V09vubLb8gpXIjj-A0",
+    authDomain: "ep2-lmp.firebaseapp.com",
+    databaseURL: "https://ep2-lmp.firebaseio.com",
+    projectId: "ep2-lmp",
+    storageBucket: "ep2-lmp.appspot.com",
+    messagingSenderId: "963103500305",
+    appId: "1:963103500305:web:719775f4f0e39da6d1a9b0"
   }
 };
 

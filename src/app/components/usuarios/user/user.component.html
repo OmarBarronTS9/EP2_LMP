@@ -1,6 +1,6 @@
 <div class="card mt-5">
     <div class="card-body">
-        <form #userForm="ngForm" (ngSubmit)="ngSubmit(userForm)">
+        <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
         <input class="hidden" name="$id" #$id="ngModel" [(ngModel)]="userService.selectedUser.$id">
         <div class="form-group">
                 <input type="text" 
@@ -10,13 +10,13 @@
                 [(ngModel)]="userService.selectedUser.name" 
                 placeholder="Nombre">
             </div>
-
+            <button type="submit" hidden #btn></button>
             <div class="form-group">
                 <input type= "text" 
                 class="form-control" 
                 name="Carrera" 
                 #carrera="ngModel" 
-                [(ngModel)]="UserService.selectedUser.carrera" 
+                [(ngModel)]="userService.selectedUser.carrera" 
                 placeholder="Carrera">
             </div>
 
