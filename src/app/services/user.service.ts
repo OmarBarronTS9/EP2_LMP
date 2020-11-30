@@ -16,7 +16,10 @@ export class UserService {
   constructor(private firebase: AngularFireDatabase) { }
 
   getUsers(){
-    this.userList = this.firebase.list('users');
+    if (this.selectedUser == null){
+      this.ErrorMsg();
+    }
+
   }
 
   insertUser(user: User){
@@ -35,6 +38,10 @@ export class UserService {
 
   deleteUser($id: string){
     this.userList.remove($id);
+  }
+
+  ErrorMsg(){
+    return alert("Este es un mensaje de error, favor de comprobar sus datos");
   }
 
 }

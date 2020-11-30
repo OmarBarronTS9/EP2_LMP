@@ -3,3 +3,4 @@ export class User {
     declare name: string;
     declare carrera: string;
 }
+

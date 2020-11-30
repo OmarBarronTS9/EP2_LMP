@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+
 //Componentes
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { UsersListComponent } from './components/usuarios/users-list/users-list.component';
 import { UserComponent } from './components/usuarios/user/user.component';
 //Servicios
 import { UserService } from './services/user.service';
+import { SumaComponent } from './components/usuarios/suma/suma.component';
 
 
 
@@ -23,7 +25,8 @@ import { UserService } from './services/user.service';
     AppComponent,
     UsuariosComponent,
     UsersListComponent,
-    UserComponent
+    UserComponent,
+    SumaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 <div class="card mt-5">
     <div class="card-body">
         <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-        <input class="hidden" name="$id" #$id="ngModel" [(ngModel)]="userService.selectedUser.$id">
+
         <div class="form-group">
                 <input type="text" 
                 class="form-control" 
@@ -21,13 +21,17 @@
             </div>
 
             <div class="form-group">
-                <button class="btn btn-primary" type="submit">
+                <button class="btn btn-primary" type="onSubmit">
                     <i class="fas fa-plus-circle"></i>Agregar
                 </button>
                 <button class="btn btn-secondary" type="reset" (click)="resetForm(userForm)">
                     <i class="fas fa-sync-alt"></i>Resetear
                 </button>
+                <div class="margin" class="text-center" *ngIf="userService.selectedUser.name == null || userService.selectedUser.carrera == null">
+                    <p>Favor de llenar los campos</p>
+                </div>
             </div>
         </form>
+        
     </div>
 </div>
